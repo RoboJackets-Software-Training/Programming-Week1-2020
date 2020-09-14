@@ -55,9 +55,9 @@ You can change your working directory using `cd` (_change directory_). Now, `cd`
 > Note: you must type out the directory name _exactly_, including correct capitalization. To make it easier, you can start typing out the beginning of a file or directory name and press `Tab` to autocomplete with the names of files in the current working directory.
 
 ## Changing the program
-Open up `hello_world.cpp` in Sublime Text - you can run it from the command line by running:
+Open up `exercise_1_0.cpp` in Sublime Text - you can run it from the command line by running:
 ```cpp
-subl hello_world.cpp
+subl exercise_1_0.cpp
 ```
 
 Fix the program so that it prints "Hello, world!" to the console.
@@ -79,6 +79,13 @@ cmake ..
 CMake has two steps: a configuration step (you just ran this!) and a build step. You can run the build step using the command `make`.
 
 You must run `make` every time you make a change to a source file (for now, just `.cpp` files). You need to rerun both `cmake` and `make` whenever you change a CMake configuration file - this usually happens when you add a new `.cpp` file.
+
+If `make` gives errors, you will need to fix your program. Otherwise, your program built successfully and is now in a file called `exercise_1_0` (with no extension) in the `build` directory. If you're in the build directory, you can run it using:
+```bash
+./exercise_1_0
+```
+
+It should print out "Hello, world!"
 
 ## Submitting
 To submit, you'll use `git` to commit your code to the master branch of your repository and push it to GitHub. GitHub classroom will then automatically grade your assignment and give you feedback in the form of a pull request.
@@ -103,9 +110,9 @@ git status
 ```
 This should show you a list of files that are staged for commit (in green). Files in red are _unstaged_ which means that when you make a new commit the files will not be included (or an old version will be used).
 
-You can add files to be committed using `git add`. Go ahead and add the files you changed (should just be the `hello_world.cpp` file from this exercise):
+You can add files to be committed using `git add`. Go ahead and add the files you changed (should just be the `exercise_1_0.cpp` file from this exercise):
 ```bash
-git add exercise_1_0/hello_world.cpp
+git add exercise_1_0/exercise_1_0.cpp
 ```
 Then, we can commit. Each commit has an associated _commit message_ that describes what changes you made from the previous version. You can use the `-m` flag to specify a commit message:
 ```bash
